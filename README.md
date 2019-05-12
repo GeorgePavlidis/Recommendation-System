@@ -43,7 +43,7 @@ pip install matplotlib
  ```bash
  python Recommendation_System.py <configuration-file> (optionally) <dir>
  ```
- <dir>: The direction where to save the result
+ dir : The direction where to save the result
  
  expirements.py
  ```bash
