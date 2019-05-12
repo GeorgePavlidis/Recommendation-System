@@ -1,0 +1,51 @@
+#!/bin/bash
+rm -rf configurations
+mkdir configurations
+python expirements.py configurations/conf_13 10 50 50 75 3
+echo done conf_13 
+python expirements.py configurations/conf_15 10 50 50 75 5
+echo done conf_15 
+python expirements.py configurations/conf_110 10 50 50 75 10
+echo done conf_110
+
+python expirements.py configurations/conf_280 10 50 50 80 5
+echo done conf_280
+python expirements.py configurations/conf_270 10 50 50 70 5
+echo done conf_270
+python expirements.py configurations/conf_250 10 50 50 50 5
+echo done conf_250
+python expirements.py configurations/conf_230 10 50 50 30 5
+echo done conf_230
+
+
+
+echo =======
+echo first expirement
+echo =======
+rm -rf expirement1
+mkdir expirement1
+python Recommendation_System.py ./configurations/conf_13 expirement1
+echo done  expirement with conf_13
+python Recommendation_System.py ./configurations/conf_15 expirement1
+echo done  expirement with conf_15
+python Recommendation_System.py ./configurations/conf_110 expirement1
+echo done  expirement with conf_110
+
+
+
+echo =======
+echo second expirement
+echo =======
+rm -rf expirement2
+mkdir expirement2
+python Recommendation_System.py ./configurations/conf_280 expirement2
+echo done  expirement with conf_280
+python Recommendation_System.py ./configurations/conf_270 expirement2
+echo done  expirement with conf_270
+python Recommendation_System.py ./configurations/conf_250 expirement2
+echo done  expirement with conf_250
+python Recommendation_System.py ./configurations/conf_230 expirement2
+echo done  expirement with conf_230
+
+python Graphs.py expirement1 "k=3 k=5 k=10"
+python Graphs.py expirement2 "x=80 x=70 x=50 x=30"
