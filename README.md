@@ -1,7 +1,8 @@
 # Recommendation-System
 
 
-Foobar is a Python library for dealing with word pluralization.
+Τhis is an experimental implementation of Recommendation System whitch create a random NxM matrix witch representing the rating of Μ items by Ν users. This score is distributed normally from 1 to 5 and the matrix's density is X%.
+The system  makes recommendations based on users and based on objects using several different functions and compare  the results. The
 
 ## Installation
 
@@ -21,10 +22,3 @@ foobar.pluralize('goose') # returns 'geese'
 foobar.singularize('phenomena') # returns 'phenomenon'
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
